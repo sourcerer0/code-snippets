@@ -27,14 +27,14 @@ Calculator reg__init(int x, int y){
 
 //SCIENTIFIC CALCULATOR
 typedef struct {
-    int x, y;
+    float x, y;
     float (*add) (float, float);
     float (*sub) (float, float);
 } Sci_Calculator;
 
 float sci__add(float x, float y){ return x+y; }
 float sci__sub(float x, float y){ return x-y; }
-Sci_Calculator sci__init(int x, int y){
+Sci_Calculator sci__init(float x, float y){
     static Sci_Calculator obj;
 
     obj.x = x;
