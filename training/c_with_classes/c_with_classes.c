@@ -12,3 +12,5 @@ int main(int argc, char *argv){
 
     return 0;
 }
+
+//INSPIRATION : https://ejrh.wordpress.com/2012/01/24/namespaces-in-c/
