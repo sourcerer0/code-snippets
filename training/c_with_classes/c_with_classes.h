@@ -30,6 +30,7 @@ typedef struct {
     float x, y;
     float (*add) (float, float);
     float (*sub) (float, float);
+    int mark;
 } Sci_Calculator;
 
 float sci__add(float x, float y){ return x+y; }
@@ -41,6 +42,8 @@ Sci_Calculator sci__init(float x, float y){
     obj.y = y;
     obj.add = &sci__add;
     obj.sub = &sci__sub;
+
+    obj.mark++;
 
     return obj;
 }
