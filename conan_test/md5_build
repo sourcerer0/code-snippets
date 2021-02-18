@@ -1,0 +1,9 @@
+#!/bin/bash
+
+touch conanfile.txt && printf "[requires]\npoco/1.10.1\n\n[generators]\ncmake" > conanfile.txt
+mkdir build && cd build && conan install .. -s os=Linux -s compiler=gcc
+
+conan info .. --graph=../file.html
+
+#CMakeLists.txt
+#cd build && cmake .. -G "Unix Makefiles" && cmake --build .
