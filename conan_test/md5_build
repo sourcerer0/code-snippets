@@ -1,9 +1,24 @@
 #!/bin/bash
 
+conan profile update settings.compiler.libcxx=libstdc++11 default
+
 touch conanfile.txt && printf "[requires]\npoco/1.10.1\n\n[generators]\ncmake" > conanfile.txt
 mkdir build && cd build && conan install .. -s os=Linux -s compiler=gcc
 
-conan info .. --graph=../file.html
+#conan info .. --graph=../file.html
 
 #CMakeLists.txt
+#***************************
+#cmake_minimum_required(VERSION 2.8.12)
+#project(MD5Encrypter)
+
+#add_definitions("-std=c++11")
+
+#include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+#conan_basic_setup()
+
+#add_executable(md5 md5.cpp)
+#target_link_libraries(md5 ${CONAN_LIBS})
+
+
 #cd build && cmake .. -G "Unix Makefiles" && cmake --build .
