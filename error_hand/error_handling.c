@@ -53,29 +53,29 @@ int main(int argc, char *argv)
 PYTHON
 --------
 staticmethod
-classmethod
+classmethod (*static Java)
 property
-abstract
+abstract (*abstract Java)
 
 C
 ---------
-static
+static (*private Java && *static C)
+const (*final Java)
 extern
 enum
 struct
 union
-*
 typedef
+*
 #
-const
 
 JAVA
 ---------
-final
-abstract
-static
-public
-default
-protected
-private
+final (*const C)
+abstract (*abstract Python)
+static (*classmethod Python)
+public (all)
+default / none (package)
+protected (package and inheritance)
+private (class)
 */
