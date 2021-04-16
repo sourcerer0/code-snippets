@@ -52,7 +52,7 @@ int main(int argc, char *argv)
 /*
 PYTHON
 --------
-static
+staticmethod
 classmethod
 property
 abstract
