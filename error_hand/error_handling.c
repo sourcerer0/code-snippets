@@ -5,31 +5,38 @@
 extern int errno;
 #define NUM_ERROR 133
 
-void print_errno(){
+void print_errno()
+{
     int option = 0;
 
     printf("Select error message\n\t>> greater than 133 for quit\n\t>> negative to display all possibilities");
-    while (option < NUM_ERROR){
+    while (option < NUM_ERROR)
+    {
         printf("\n>> ");
         scanf("%d", &option);
 
-        if (option < 0){
-            for (int x = 0; x < NUM_ERROR; x++){
+        if (option < 0)
+        {
+            for (int x = 0; x < NUM_ERROR; x++)
+            {
                 printf("%d %s\n\n", x, strerror(x));
             }
         }
-        else if (option > NUM_ERROR){
+        else if (option > NUM_ERROR)
+        {
             printf("Goodbye! :)\n");
             return;
         }
-        else {
+        else
+        {
             printf("%d %s\n", option, strerror(option));
         }
     }
     return;
 }
 
-int main(int argc, char *argv){
+int main(int argc, char *argv)
+{
     /*
     FILE *file;
     file = fopen("something.txt", "a");
@@ -41,3 +48,34 @@ int main(int argc, char *argv){
 
     return 0;
 }
+
+/*
+PYTHON
+--------
+static
+classmethod
+property
+abstract
+
+C
+---------
+static
+extern
+enum
+struct
+union
+*
+typedef
+#
+const
+
+JAVA
+---------
+final
+abstract
+static
+public
+default
+protected
+private
+*/
