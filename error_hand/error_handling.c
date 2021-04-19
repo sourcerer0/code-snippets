@@ -48,34 +48,3 @@ int main(int argc, char *argv)
 
     return 0;
 }
-
-/*
-PYTHON
---------
-staticmethod
-classmethod (*static Java)
-property
-abstract (*abstract Java)
-
-C
----------
-static (*private Java && *static C)
-const (*final Java)
-extern
-enum
-struct
-union
-typedef
-*
-#
-
-JAVA
----------
-final (*const C)
-abstract (*abstract Python)
-static (*classmethod Python)
-public (all)
-default / none (package)
-protected (package and inheritance)
-private (class)
-*/
