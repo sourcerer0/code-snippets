@@ -2,7 +2,7 @@
 #include <errno.h>
 #include <stdio.h>
 
-extern int errno;
+//extern int errno;
 #define NUM_ERROR 133
 
 void print_errno()
@@ -37,14 +37,14 @@ void print_errno()
 
 int main(int argc, char *argv)
 {
-    /*
     FILE *file;
-    file = fopen("something.txt", "a");
-    if (errno == 2) {
+    file = fopen("something.txt", "r");
+    if (errno == 2)
+    {
         printf("%d %s\n", errno, strerror(errno));
     }
-    */
-    print_errno();
+
+    //print_errno();
 
     return 0;
 }
