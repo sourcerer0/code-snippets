@@ -28,6 +28,8 @@ int main()
 static void
 removeDoubleWhiteSpaces_(const char *pwInputString, char *outputString)
 {
+    memset(outputString, 0x00, sizeof(outputString));
+
     int spaceCounter = 0;
     int indexWord = 0;
 
@@ -58,6 +60,8 @@ removeDoubleWhiteSpaces_(const char *pwInputString, char *outputString)
 static void
 invertSentenceOrder_(const char *pwInputString, char *outputString)
 {
+    memset(outputString, 0x00, sizeof(outputString));
+
     int wordCount = 0;
     int pwInputStringIndex = -1;
 
@@ -90,6 +94,8 @@ invertSentenceOrder_(const char *pwInputString, char *outputString)
 static int
 splitSentence_(const char *pwInputString, char (*outputMatrix)[MAX_SIZE_OF_STRING + 1])
 {
+    memset(outputMatrix, 0x00, sizeof(outputMatrix));
+
     int wordCount = 0;
     bool notAWord = false;
 
