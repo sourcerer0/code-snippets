@@ -9,10 +9,11 @@ static void
 invertSentenceOrder_(const char *pwInputString, char *outputString);
 
 static int
-splitSentence_(const char *pwInputString, char (*outputMatrix)[MAX_SIZE_OF_STRING + 1]);
+splitSentence_(const char *pwInputString, ptrToMatrix *outputMatrix);
 
 
 
+/*-----------------------------------------------------------*/
 int main()
 {
     testBothFunctions("a   ");
@@ -92,7 +93,7 @@ invertSentenceOrder_(const char *pwInputString, char *outputString)
 
 /*-----------------------------------------------------------*/
 static int
-splitSentence_(const char *pwInputString, char (*outputMatrix)[MAX_SIZE_OF_STRING + 1])
+splitSentence_(const char *pwInputString, ptrToMatrix *outputMatrix)
 {
     memset(outputMatrix, 0x00, sizeof(outputMatrix));
 
@@ -150,9 +151,7 @@ void testBothFunctions(char *sentence)
 
     printf("%s\n", outputStringInverted);
 
-    /*
     memset(pwInputString, 0x00, sizeof(pwInputString));
     memset(outputString, 0x00, sizeof(outputString));
     memset(outputStringInverted, 0x00, sizeof(outputStringInverted));
-    */
 }
