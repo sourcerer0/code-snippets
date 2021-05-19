@@ -11,15 +11,10 @@ invertSentenceOrder_(const char *pwInputString, char *outputString);
 static int
 splitSentence_(const char *pwInputString, ptrToMatrix *outputMatrix);
 
-
-
 /*-----------------------------------------------------------*/
 int main()
 {
-    testBothFunctions("a   ");
-    testBothFunctions("      ");
-    testBothFunctions("a  b c");
-    testBothFunctions("1 2 3 4 5 6 7 8 9 10");
+    testBothFunctions("1 2    3 4       5 6 7   8 9    10");
     testBothFunctions("essa    frase tem   muitos espaços    vazios");
 
     return 0;
@@ -140,18 +135,15 @@ splitSentence_(const char *pwInputString, ptrToMatrix *outputMatrix)
 /*-----------------------------------------------------------*/
 void testBothFunctions(char *sentence)
 {
-    char pwInputString[MAX_SIZE_OF_STRING + 1];
     char outputString[MAX_SIZE_OF_STRING + 1];
     char outputStringInverted[MAX_SIZE_OF_STRING + 1];
 
-    strcpy(pwInputString, sentence);
-
-    removeDoubleWhiteSpaces_(pwInputString, outputString);
+    removeDoubleWhiteSpaces_(sentence, outputString);
     invertSentenceOrder_(outputString, outputStringInverted);
 
     printf("%s\n", outputStringInverted);
 
-    memset(pwInputString, 0x00, sizeof(pwInputString));
     memset(outputString, 0x00, sizeof(outputString));
     memset(outputStringInverted, 0x00, sizeof(outputStringInverted));
+    sentence = "";
 }
